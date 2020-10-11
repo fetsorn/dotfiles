@@ -1,0 +1,33 @@
+* install homebrew (installs cmdtools also)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+* run "brew bundle" on /.../dotfiles/Brewfile for apps
+* run /.../dotfiles/macos for sensible defaults and logout for it to take effect
+* manually
+ - change main mouse button to right in "System Preferences"
+ - replace display background with black color
+ - set screensaver timeout to "Never"
+* dotfiles
+ln -s /Volumes/.../mm/ ~/mm/
+ln -s /.../dotfiles/doom-config.el ~/.doom.d/config.el
+ln -s /.../dotfiles/doom-packages.el ~/.doom.d/packages.el
+ln -s /.../dotfiles/doom-init.el ~/.doom.d/init.el
+* emacs
+#all apps should have been installed from Brewfile by now
+ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+* apps
+# should be stored on a hard drive
+** karabiner
+https://karabiner-elements.pqrs.org
+ - swap caps and ctrl
+** activity-watch
+** amethyst
+** stretchly
+** firefox
+** xcode
+** opera
+** vlc
+** inkscape
+** gimp
+** 
