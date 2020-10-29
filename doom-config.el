@@ -64,9 +64,12 @@
   (interactive (set-input-method "russian-computer" t)))
 (defun fetsorn-chinese ()
   (interactive (set-input-method "pyim" t)))
+(defun fetsorn-sisheng ()
+  (interactive (set-input-method "chinese-sisheng" t)))
 
 (map! :n "C-c r" :i "C-c r" 'fetsorn-russian)
 (map! :n "C-c c" :i "C-c c" 'fetsorn-chinese)
+(map! :n "C-c s" :i "C-c s" 'fetsorn-sisheng)
 
 (setq default-input-method "russian-computer")
 
@@ -82,7 +85,11 @@
 ;; Enable Chinese word segmentation support (支持中文分词)
 (setq youdao-dictionary-use-chinese-word-segmentation t)
 
-
+(defun fetsorn-hanzi2pinyin-at-point (number)       ; Interactive version.
+  "Multiply NUMBER by seven."
+  (interactive "p")
+  (message (pyim-hanzi2pinyin (doom-thing-at-point-or-region))))
+(global-set-key (kbd "C-c u") 'fetsorn-hanzi2pinyin-at-point)
 
 
 
@@ -360,3 +367,16 @@ backup-by-copying t)  ;; Copy all files, don't rename them.
     (org-table-goto-column 1)
     (org-table-goto-line 3)
     (org-table-sort-lines nil ?T)))
+
+
+
+
+
+(defun insert-random-uuid ()
+  (interactive)
+  (shell-command "uuidgen" t))
+
+(map! "C-c d" 'insert-random-uuid)
+
+
+(map! "C-c ESC ESC" 'vterm-send-escape)

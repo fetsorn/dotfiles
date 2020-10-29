@@ -45,6 +45,9 @@ sudo spctl --master-disable
 # remove all apps from Dock
 dockutil --remove all
 
+# install fzf
+$(brew --prefix)/opt/fzf/install
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################

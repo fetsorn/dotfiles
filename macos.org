@@ -4,7 +4,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 #+END_SRC
 * run "brew bundle" on /.../dotfiles/Brewfile for apps
-* run /.../dotfiles/macos for sensible defaults and logout for it to take effect
+* run /.../dotfiles/macos.sh for sensible defaults and logout for it to take effect
+macos.sh should be run after homembrew as it uses dockutil, fzf
 * manually
  - change main mouse button to right in "System Preferences"
  - replace display background with black color
@@ -15,6 +16,8 @@ ln -s /.../dotfiles/doom-config.el ~/.doom.d/config.el
 ln -s /.../dotfiles/doom-packages.el ~/.doom.d/packages.el
 ln -s /.../dotfiles/doom-init.el ~/.doom.d/init.el
 ln -s /.../dotfiles/gitconfig ~/.gitconfig
+ln -s /.../dotfiles/zshrc ~/.zshrc
+ln -s /.../dotfiles/ ~/.p10k.zsh
 * emacs
 # all apps should have been installed from Brewfile by now
 ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
