@@ -58,8 +58,6 @@
 (package! youdao-dictionary)
 
 
-
-
 ;; agendas
 
 (package! activity-watch-mode)
@@ -67,3 +65,6 @@
 (package! org-journal)
 
 (package! org-roam)
+
+(package! ox-awesomecv
+  :recipe (:host gitlab :repo "zzamboni/org-cv" :branch "awesomecv"))

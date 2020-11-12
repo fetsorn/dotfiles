@@ -380,3 +380,13 @@ backup-by-copying t)  ;; Copy all files, don't rename them.
 
 
 (map! "C-c ESC ESC" 'vterm-send-escape)
+
+
+; insert lambda for writing lambda expressions
+(defun fetsorn-insert-lambda ()
+  (interactive)
+  (insert-char 955 1 t))
+
+(map! "C-c l" 'fetsorn-insert-lambda)
+
+(setq exec-path (append exec-path '("/Users/fetsorn/.cabal/bin") '("/Users/fetsorn/.ghcup/bin")))

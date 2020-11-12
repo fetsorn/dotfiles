@@ -33,6 +33,9 @@ vterm_printf(){
     fi
 }
 
+alias blender="/Volumes/HD-PATU3/Applications/Blender.app/Contents/MacOS/Blender"
+export PATH="$PATH:/Library/TeX/texbin"
+
 # p10k boilerplate
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -40,3 +43,5 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "/Users/fetsorn/.ghcup/env" ] && source "/Users/fetsorn/.ghcup/env" # ghcup-env
+export PATH="$PATH:/Users/fetsorn/.cabal/bin:/Users/fetsorn/.ghcup/bin"
