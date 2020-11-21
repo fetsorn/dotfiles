@@ -68,3 +68,6 @@
 
 (package! ox-awesomecv
   :recipe (:host gitlab :repo "zzamboni/org-cv" :branch "awesomecv"))
+
+(package! ebib)
+(package! org-ref)

@@ -207,11 +207,12 @@
 
 
 
-
+(setq auto-save-default t)
+(setq create-lockfiles t)
 ;; Legacy backup routine
 (setq version-control t     ;; Use version numbers for backups.
-delete-old-versions -1 ;; Don't delete excess backup versions.
-backup-by-copying t)  ;; Copy all files, don't rename them.
+      delete-old-versions -1 ;; Don't delete excess backup versions.
+      backup-by-copying t)  ;; Copy all files, don't rename them.
 
 (setq vc-make-backup-files t) ;; versioned backups
 
