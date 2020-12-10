@@ -393,6 +393,17 @@
 (setq exec-path (append exec-path '("/Users/fetsorn/.cabal/bin") '("/Users/fetsorn/.ghcup/bin")))
 
 
+; should add an option to ediff for saving both conflicting changes
+; https://stackoverflow.com/questions/9656311/conflict-resolution-with-emacs-ediff-how-can-i-take-the-changes-of-both-version#29757750
+(defun ediff-copy-both-to-C ()
+  (interactive)
+  (ediff-copy-diff ediff-current-difference nil 'C nil
+                   (concat
+                    (ediff-get-region-contents ediff-current-difference 'A ediff-control-buffer)
+                    (ediff-get-region-contents ediff-current-difference 'B ediff-control-buffer))))
+(defun add-d-to-ediff-mode-map () (define-key ediff-mode-map "d" 'ediff-copy-both-to-C))
+(add-hook 'ediff-keymap-setup-hook 'add-d-to-ediff-mode-map)
+
 ; bandaid for org-mode function definition is void: ad-Advice-newline-and-indent doom-emacs#3172
 ; https://github.com/hlissner/doom-emacs/issues/3172#issuecomment-683259265
 (add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))
