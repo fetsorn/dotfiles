@@ -391,3 +391,8 @@
 (map! "C-c l" 'fetsorn-insert-lambda)
 
 (setq exec-path (append exec-path '("/Users/fetsorn/.cabal/bin") '("/Users/fetsorn/.ghcup/bin")))
+
+
+; bandaid for org-mode function definition is void: ad-Advice-newline-and-indent doom-emacs#3172
+; https://github.com/hlissner/doom-emacs/issues/3172#issuecomment-683259265
+(add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))

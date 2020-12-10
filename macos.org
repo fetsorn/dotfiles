@@ -9,7 +9,12 @@ macos.sh should be run after homembrew as it uses dockutil, fzf
 * manually
  - change main mouse button to right in "System Preferences"
  - replace display background with black color
+ - set accent color to gray
  - set screensaver timeout to "Never"
+ - set keyboard shortcuts for mission control spaces
+ - disable interface sounds
+ - use f1, f2 etc. keys as standart function keys
+ - add "new folder" icon to the Finder toolbar
 * dotfiles
 ln -s /Volumes/.../mm/ ~/mm/
 ln -s /.../dotfiles/doom-config.el ~/.doom.d/config.el
@@ -17,7 +22,7 @@ ln -s /.../dotfiles/doom-packages.el ~/.doom.d/packages.el
 ln -s /.../dotfiles/doom-init.el ~/.doom.d/init.el
 ln -s /.../dotfiles/gitconfig ~/.gitconfig
 ln -s /.../dotfiles/zshrc ~/.zshrc
-ln -s /.../dotfiles/ ~/.p10k.zsh
+ln -s /.../dotfiles/p10k.zsh ~/.p10k.zsh
 * emacs
 # all apps should have been installed from Brewfile by now
 ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app

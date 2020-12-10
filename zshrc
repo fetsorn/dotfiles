@@ -44,4 +44,4 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f "/Users/fetsorn/.ghcup/env" ] && source "/Users/fetsorn/.ghcup/env" # ghcup-env
-export PATH="$PATH:/Users/fetsorn/.cabal/bin:/Users/fetsorn/.ghcup/bin"
+export PATH="$PATH:/Users/fetsorn/.cabal/bin:/Users/fetsorn/.ghcup/bin:/Users/fetsorn/.local/bin"
